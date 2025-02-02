@@ -2,7 +2,8 @@ const fs = require("fs");
 const path = require("path");
 
 exports.handler = async function(event, context) {
-    const filesDirectory = path.join(__dirname, "../public/files");
+    const filesDirectory = path.join(__dirname, '..', '..', 'public', 'files');
+
 
     return new Promise((resolve, reject) => {
         fs.readdir(filesDirectory, (err, files) => {
