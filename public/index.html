@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fairlink Logistics and Services</title>
+    <!-- FontAwesome -->
+    <link rel="icon" href="./images/fair_logo-removebg-preview.png" type="image/png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./images/fair_logo-removebg-preview.png" alt="logo-image" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services-section">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./exam.html">Exam Solutions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Carousel -->
+<header id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+        <!-- Slide 1: Logistics and Delivery Services -->
+        <div class="carousel-item active" style="background-image: url('./images/truckload.jpg');">
+            <div class="carousel-caption">
+                <h1>Streamlined Logistics Solutions</h1>
+                <p>Comprehensive delivery, freight, and cargo services designed to meet your needs.</p>
+                <a href="#collapseLogistics" class="btn btn-primary" onclick="openAccordion('collapseLogistics')">Explore Logistics Services</a>
+            </div>
+        </div>
+
+        <!-- Slide 2: Supply Chain Solutions -->
+        <div class="carousel-item" style="background-image: url('./images/supply.jpg');">
+            <div class="carousel-caption">
+                <h1>Efficient Supply Chain Solutions</h1>
+                <p>Seamlessly connecting businesses with reliable supply and distribution networks.</p>
+                <a href="#collapseSupplyChain" class="btn btn-primary" onclick="openAccordion('collapseSupplyChain')">Learn About Our Supply Chains</a>
+            </div>
+        </div>
+
+        <!-- Slide 3: Educational Solutions -->
+        <div class="carousel-item" style="background-image: url('./images/happyschoolchildren.jpg');">
+            <div class="carousel-caption">
+                <h1>Empowering Education</h1>
+                <p>Customized learning materials, e-resources, and uniforms for schools & institutions.</p>
+                <a href="#collapseEducation" class="btn btn-primary" onclick="openAccordion('collapseEducation')">Discover New Educational Solutions</a>
+            </div>
+        </div>
+
+        <!-- Slide 4: Digital and Branding Services -->
+        <div class="carousel-item" style="background-image: url('./images/printing\ press.jpg');">
+            <div class="carousel-caption">
+                <h1>Innovative Branding and Digital Services</h1>
+                <p>High-quality promotional materials, websites, and e-commerce solutions.</p>
+                <a href="#collapseDigitalBranding" class="btn btn-primary" onclick="openAccordion('collapseDigitalBranding')">Explore Branding Services</a>
+            </div>
+        </div>
+
+        <!-- Slide 5: Workforce and Opportunity Linkage -->
+        <div class="carousel-item" style="background-image: url('./images/fairlinksmile.jpg');">
+            <div class="carousel-caption">
+                <h1>Building Opportunities</h1>
+                <p>Linking contractors, job seekers, and skilled professionals to the right opportunities.</p>
+                <a href="#collapseWorkforceLinkage" class="btn btn-primary" onclick="openAccordion('collapseWorkforceLinkage')">Connect with Opportunities</a>
+            </div>
+        </div>
+
+        <!-- Slide 6: Training and Workforce Development -->
+        <div class="carousel-item" style="background-image: url('./images/tailors.jpg');">
+            <div class="carousel-caption">
+                <h1>Upskilling for Success</h1>
+                <p>Professional and technical training programs to empower careers and businesses.</p>
+                <a href="#collapseTrainingDevelopment" class="btn btn-primary" onclick="openAccordion('collapseTrainingDevelopment')">Join Our Training Programs</a>
+            </div>
+        </div>
+
+        <!-- Slide 7: Hotel and Travel Services -->
+        <div class="carousel-item" style="background-image: url('./images/1735220022194.jpg');">
+            <div class="carousel-caption">
+                <h1>Comfortable Travel Solutions</h1>
+                <p>Seamless hotel booking and reliable travel arrangements for all your needs.</p>
+                <a href="#collapseHotelTravel" class="btn btn-primary" onclick="openAccordion('collapseHotelTravel')">Book Your Next Journey With Us</a>
+            </div>
+        </div>
+
+        <!-- Slide 8: Cold Chain Logistics -->
+        <div class="carousel-item" style="background-image: url('./images/coldchain.webp');">
+            <div class="carousel-caption">
+                <h1>Cold Chain Expertise</h1>
+                <p>Preserving the quality of perishable goods through temperature-controlled logistics.</p>
+                <a href="#collapseColdChain" class="btn btn-primary" onclick="openAccordion('collapseColdChain')">Explore Our Cold Chain Services</a>
+            </div>
+        </div>
+
+              <!--slide 9: CSR  -->
+        <div class="carousel-item" style="background-image: url('./images/happyschholgirls.jpg');">
+        <div class="carousel-caption">
+            <h1>Empowering Communities</h1>
+            <p>Driving impact through education and entrepreneurial support.</p>
+            <a href="#collapseCSR" class="btn btn-primary" onclick="openAccordion('collapseCSR')">Learn About Our CSR</a>
+        </div>
+        </div>
+
+        <!-- slide 10: partnership -->
+        <div class="carousel-item" style="background-image: url('./images/operationa\ Model.webp');">
+            <div class="carousel-caption">
+                <h1>Operational Model</h1>
+                <p>Driving success through partnerships, investments, technology, and compliance.</p>
+                <a href="#collapseOperationalModel" class="btn btn-primary" onclick="openAccordion('collapseOperationalModel')">Learn About Our Operational Model</a>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</header>
+
+
+ <!-- About Us Section -->
+ <section id="about" class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Text Content -->
+            <div class="col-md-6">
+                <h2 class="display-6 fw-bold mb-4">About Us</h2>
+                <p class="text-muted" id="about-text">
+                    Welcome to Fairlink Logistics and Services, where fairness is more than just a principle; it’s our way of life. Fully registered under the Corporate Affairs Commission (CAC) of Nigeria, Fairlink proudly operates from Aba and Port Harcourt, delivering top-notch logistics, educational, and consultancy solutions across Nigeria and beyond.
+
+                Our motto, “Fairness in Every Deal,” is rooted in Proverbs 16:11 (NLT): “The Lord demands fairness in every business deal; He sets the standards for fairness.” This scripture inspires us to uphold integrity, transparency, and ethical excellence in every aspect of our work. 
+                    <span class="more-text d-none"> 
+                        Whether it's helping businesses streamline operations or empowering communities through education, we are committed to creating sustainable value for our clients and partners.
+
+At Fairlink, innovation and modern technology drive our services. From efficient logistics and supply chain solutions to tailored educational resources and cutting-edge digital branding, we provide a diverse range of offerings to meet the unique needs of individuals, businesses, and institutions. With strategic partnerships and a passion for excellence, we are transforming industries and empowering lives, one solution at a time.
+
+Join us on this journey of fairness, innovation, and excellence. Together, we’ll build a future that reflects integrity, collaboration, and success.
+                    </span>
+                </p>
+                <button id="about-toggle" class="btn btn-primary btn-sm">Read More</button>
+            </div>
+            <!-- Video Content -->
+            <div class="col-md-6">
+                <div class="video-container">
+                    <video controls width="100%" height="auto">
+                        <source src="./images/first video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services-section" class="py-5">
+    <div class="container">
+        <header class="text-center mb-5">
+            <h1 class="display-5 fw-bold">Explore Our Services</h1>
+            <p class="lead text-muted">Discover the diverse solutions we offer across multiple industries.</p>
+        </header>
+
+        <div class="accordion" id="servicesAccordion">
+
+            <!-- Logistics and Delivery Services -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingLogistics">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLogistics" aria-expanded="true" aria-controls="collapseLogistics">
+                        Logistics and Delivery Services
+                    </button>
+                </h2>
+                <div id="collapseLogistics" class="accordion-collapse collapse show" aria-labelledby="headingLogistics" data-bs-parent="#servicesAccordion">
+                    <div class="accordion-body">
+                        <h5>Last-Mile Delivery</h5>
+<p>We provide seamless last-mile delivery solutions, ensuring fast and reliable delivery of packages directly to homes and offices. Our fleet of motorcycles and small trucks efficiently handle e-commerce parcels, with branded packaging for a professional touch.</p>
+
+<h5>Freight and Cargo Services</h5>
+<p>Our freight and cargo services are designed for bulk goods, offering reliable transportation for crates, boxes, and large shipments. With our experienced team and extensive network, we guarantee your products reach their destinations safely and on time.</p>
+
+<h5>Cold Chain Logistics</h5>
+<p>We specialize in cold chain logistics, using refrigerated trucks and temperature-controlled storage to transport perishable goods such as fresh produce and medicines. Our clean, professional facilities ensure that your products remain in optimal condition throughout transit.</p>
+
+<h5>Express Delivery Services</h5>
+<p>When time is of the essence, our express delivery services are the solution. With couriers on motorcycles and vans branded with "Express Delivery," we prioritize rapid deliveries to both urban and rural locations, ensuring your packages arrive quickly and securely.</p>
+
+<h5>Passenger Connections</h5>
+<p>Our passenger connection services make travel easy and convenient. From purchasing tickets at our travel booking desk to boarding buses at modern terminals, we offer a smooth travel experience for every passenger.</p>
+
+<h5>Car Rentals</h5>
+<p>Our car rental services offer a wide range of vehicles for all your transportation needs. Whether you're traveling for business or leisure, our professional representatives are available to help you choose the perfect rental, ensuring a hassle-free experience.</p>
+
+                       </div>
+                </div>
+            </div>
+
+            <!-- Supply Chain Solutions -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSupplyChain">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSupplyChain" aria-expanded="false" aria-controls="collapseSupplyChain">
+                        Supply Chain Solutions
+                    </button>
+                </h2>
+                <div id="collapseSupplyChain" class="accordion-collapse collapse" aria-labelledby="headingSupplyChain" data-bs-parent="#servicesAccordion">
+                    <div class="accordion-body">
+                        <h5>Goods Supply from Dealers to Customers</h5>
+                        <p>We streamline the supply chain by efficiently transferring goods from manufacturers to dealers and then to retail stores. Our expert handling ensures your products move smoothly through every stage, reaching customers with speed and reliability.</p>
+                        
+                        <h5>Distribution of Goods</h5>
+                        <p>Our distribution services are designed to meet the needs of wholesalers, retailers, and consumers. From sorting and packaging at our distribution centers to timely deliveries, we ensure that every item is efficiently routed to its destination, making your supply process seamless.</p>
+                        </div>
+                </div>
+            </div>
+
+            <!-- Educational Solutions -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingEducation">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEducation" aria-expanded="false" aria-controls="collapseEducation">
+                        Educational Solutions
+                    </button>
+                </h2>
+                <div id="collapseEducation" class="accordion-collapse collapse" aria-labelledby="headingEducation" data-bs-parent="#servicesAccordion">
+                    <div class="accordion-body">
+                        <h5>Customized Learning Materials</h5>
+                        <p>We create high-quality, customized learning materials including textbooks, workbooks, and storybooks. Our design studio works closely with educators to ensure that each piece of content is tailored to meet the specific needs of students and enhances the learning experience.</p>
+                        
+                        <h5>Stationery Supplies</h5>
+                        <p>Our comprehensive stationery supply services cater to schools and offices, offering a wide range of products. With a well-organized warehouse and dedicated staff, we ensure timely order preparation and delivery, so you never run out of essential supplies.</p>
+                        
+                        <h5>Uniforms Production</h5>
+                        <p>We provide expert uniforms production services, offering precision tailoring for school uniforms. From adding monograms to attaching badges, our skilled tailors use the latest equipment to deliver high-quality, durable uniforms that meet your specifications.</p>
+                        
+                        <h5>E-Learning Resources</h5>
+                        <p>Our e-learning resources empower students with digital tools for success. We offer a variety of online tutorials, solved past questions, and interactive learning materials to enhance students' engagement and support their academic progress.</p>
+                        
+                        <h5>University Learning Resources</h5>
+                        <p>We support university students with digital access to study guides, past questions, and other valuable learning materials. Our digital platform allows students to engage with resources anytime, ensuring they have the tools they need to excel in their studies.</p>
+                         </div>
+                </div>
+            </div>
+
+            <!-- Digital and Branding Services -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingDigitalBranding">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDigitalBranding" aria-expanded="false" aria-controls="collapseDigitalBranding">
+                        Digital and Branding Services
+                    </button>
+                </h2>
+                <div id="collapseDigitalBranding" class="accordion-collapse collapse" aria-labelledby="headingDigitalBranding" data-bs-parent="#servicesAccordion">
+                    <div class="accordion-body">
+                        <h5>Printing and Branding</h5>
+<p>We offer high-quality printing and branding services, delivering vibrant materials such as banners, flyers, and business cards. Whether you need striking visuals for your business or an event, we ensure your brand stands out with top-notch designs and materials.</p>
+
+<h5>Website and App Development</h5>
+<p>Our team of expert developers specializes in creating user-friendly websites and apps tailored for schools, businesses, and other institutions. We work closely with clients to build digital solutions that are both functional and visually appealing, ensuring seamless user experiences.</p>
+
+<h5>E-commerce Solutions</h5>
+<p>We provide comprehensive e-commerce solutions that enable businesses to showcase their products, such as books and uniforms, through sleek online stores. Our seamless online shopping experience helps customers complete their purchases easily and efficiently, enhancing both their shopping experience and your business growth.</p>
+</div>
+                </div>
+            </div>
+
+            <!-- Workforce and Opportunity Linkage -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingWorkforceLinkage">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWorkforceLinkage" aria-expanded="false" aria-controls="collapseWorkforceLinkage">
+                        Workforce and Opportunity Linkage
+                    </button>
+                </h2>
+                <div id="collapseWorkforceLinkage" class="accordion-collapse collapse" aria-labelledby="headingWorkforceLinkage" data-bs-parent="#servicesAccordion">
+                    <div class="accordion-body">
+                        <h5>Connecting Contractors to Jobs</h5>
+                        <p>We specialize in connecting skilled contractors with the right job opportunities. By leveraging advanced mobile apps and coordination tools, we ensure that supervisors can efficiently allocate resources and manage tasks, streamlining the workflow on every construction site.</p>
+                        
+                        <h5>Job Opportunities for Job Seekers</h5>
+                        <p>Our platform provides a bridge between job seekers and potential employers. Whether through career fairs or our recruitment portal, we showcase a wide range of job postings and connect candidates with employers, facilitating a smooth hiring process and career advancement.</p>
+                        
+                        <h5>Skill Connections</h5>
+                        <p>We help connect skilled professionals, such as plumbers, graphic designers, and more, with clients in need of their expertise. Our service ensures effective matchmaking, allowing professionals to offer tailored solutions and customers to access reliable, high-quality services.</p>
+                           </div>
+                </div>
+            </div>
+
+            <!-- Hotel and Travel Services -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingHotelTravel">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHotelTravel" aria-expanded="false" aria-controls="collapseHotelTravel">
+                        Hotel and Travel Services
+                    </button>
+                </h2>
+                <div id="collapseHotelTravel" class="accordion-collapse collapse" aria-labelledby="headingHotelTravel" data-bs-parent="#servicesAccordion">
+                    <div class="accordion-body">
+                        <h5>Hotel Booking</h5>
+<p>We provide personalized hotel booking services, helping clients find the perfect accommodations for both business and leisure. From luxurious resorts to comfortable boutique hotels, we showcase a range of options and ensure seamless booking through our expert travel consultants.</p>
+
+<h5>Flight Reservations</h5>
+<p>Our flight reservation service offers clients access to the best flight options, ensuring they find the most convenient schedules and affordable rates. We work with top airlines to deliver a smooth booking experience for both domestic and international travel.</p>
+
+<h5>Transportation Services</h5>
+<p>We arrange reliable transportation for our clients, offering car rentals, airport transfers, and shuttle services. Whether traveling for business or leisure, we ensure comfortable and timely journeys with premium vehicles and professional drivers.</p>
+
+<h5>Event Planning</h5>
+<p>Our event planning services are designed to make your special occasions memorable. From corporate meetings to weddings and conferences, we handle all aspects of event coordination, ensuring flawless execution and a memorable experience for all attendees.</p>
+ </div>
+                </div>
+            </div>
+
+            <!-- Training and Workforce Development -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTrainingDevelopment">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrainingDevelopment" aria-expanded="false" aria-controls="collapseTrainingDevelopment">
+                        Training and Workforce Development
+                    </button>
+                </h2>
+                <div id="collapseTrainingDevelopment" class="accordion-collapse collapse" aria-labelledby="headingTrainingDevelopment" data-bs-parent="#servicesAccordion">
+                    <div class="accordion-body">
+                        <h5>Professional Development Courses</h5>
+<p>We offer a range of professional development courses designed to enhance leadership, communication, and specialized skills. Our interactive seminars and workshops equip professionals with the knowledge and tools they need to advance their careers and drive success in their industries.</p>
+
+<h5>Entrepreneurship Training</h5>
+<p>Our entrepreneurship training programs are designed for aspiring business owners. Through comprehensive sessions on business planning, funding strategies, and scaling techniques, we empower entrepreneurs with the skills and confidence to launch and grow successful businesses.</p>
+
+<h5>Technical Skills Training</h5>
+<p>We provide hands-on technical skills training in areas such as graphic design, coding, and tailoring. Using state-of-the-art equipment, our programs equip individuals with practical skills that enhance their expertise and prepare them for success in their respective fields.</p>
+ </div>
+                </div>
+            </div>
+
+            <!-- Corporate and Social Responsibility (CSR) -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingCSR">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCSR" aria-expanded="false" aria-controls="collapseCSR">
+                        Corporate and Social Responsibility (CSR)
+                    </button>
+                </h2>
+                <div id="collapseCSR" class="accordion-collapse collapse" aria-labelledby="headingCSR" data-bs-parent="#servicesAccordion">
+                    <div class="accordion-body">
+                        <h5>Community Outreach</h5>
+                        <p>We are committed to giving back to communities through outreach initiatives such as book donation drives. By providing educational materials to underprivileged schools, we help empower children with the tools they need to succeed academically and personally.</p>
+                        
+                        <h5>Youth Empowerment</h5>
+                        <p>Our youth empowerment programs focus on equipping young people with the skills and knowledge to thrive. Through workshops on entrepreneurship and education, in collaboration with governments and NGOs, we foster opportunities for growth and leadership among the youth.</p>
+                        
+                        <h5>Environmental Sustainability Initiatives</h5>
+                        <p>We are dedicated to promoting sustainability through community-based environmental initiatives. From tree planting campaigns to recycling programs, we actively engage local communities in efforts to protect and preserve the environment for future generations.</p>                          
+                    </div>
+                </div>
+            </div>
+
+            <!-- cold chain -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingColdChain">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseColdChain" aria-expanded="false" aria-controls="collapseColdChain">
+                        Cold Chain Logistics
+                    </button>
+                </h2>
+                <div id="collapseColdChain" class="accordion-collapse collapse" aria-labelledby="headingColdChain" data-bs-parent="#servicesAccordion">
+                    <div class="accordion-body">
+                        <h5>Temperature-Controlled Transport</h5>
+<p>We offer advanced temperature-controlled transport solutions to ensure that your goods are safely delivered at the optimal temperature. Our fleet of refrigerated vehicles is designed to maintain the integrity of perishable items throughout their journey.</p>
+
+<h5>Real-Time Monitoring</h5>
+<p>With state-of-the-art sensors and monitoring software, we provide real-time tracking of temperature and humidity levels during transit. This ensures that your goods remain within the required conditions at all times, offering peace of mind and reliability.</p>
+
+<h5>Cold Storage Facilities</h5>
+<p>Our custom-built cold storage facilities are equipped to handle perishable goods with precision. Designed to meet the highest industry standards, we provide safe, efficient, and hygienic storage for a variety of temperature-sensitive products.</p>
+
+<h5>Regulatory Compliance</h5>
+<p>We strictly adhere to industry standards and government regulations for food and pharmaceutical logistics. Our commitment to compliance ensures that all goods are transported and stored in line with the highest safety and quality standards.</p>
+
+<h5>End-to-End Supply Chain Solutions</h5>
+<p>We provide end-to-end solutions for your cold chain logistics needs. From transport to storage and distribution, our comprehensive services ensure that your products are handled with care and delivered in perfect condition, every time.</p>
+</div>
+                </div>
+            </div>
+            
+
+            <!-- Operational Model -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOperationalModel">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOperationalModel" aria-expanded="false" aria-controls="collapseOperationalModel">
+                        Operational Model
+                    </button>
+                </h2>
+                <div id="collapseOperationalModel" class="accordion-collapse collapse" aria-labelledby="headingOperationalModel" data-bs-parent="#servicesAccordion">
+                    <div class="accordion-body">
+                        <h5>Strategic Partnerships</h5>
+<p>We foster strategic partnerships across various sectors, bringing together professionals to collaborate and create synergy. Our approach ensures that each partnership is designed for mutual growth and long-term success, delivering value to all stakeholders.</p>
+
+<h5>Investment Opportunities</h5>
+<p>We connect investors with lucrative opportunities through detailed presentations, showcasing high-potential projects. With comprehensive financial charts and clear legal agreements, we ensure transparency and provide investors with the insights they need to make informed decisions.</p>
+
+<h5>Technology Integration</h5>
+<p>We integrate cutting-edge technology to optimize operations, from advanced tracking systems to real-time logistics dashboards. Our solutions streamline processes, improve efficiency, and provide actionable insights to keep your business ahead of the competition.</p>
+
+<h5>Legal Oversight</h5>
+<p>Our legal team ensures thorough oversight and accountability, reviewing and signing contracts to guarantee compliance. With a deep understanding of industry regulations, we help safeguard your interests and ensure that all business dealings are legally sound and transparent.</p>
+
+<h5>Risk Management Solutions</h5>
+<p>We provide comprehensive risk management services to help businesses identify, assess, and mitigate potential risks. Our solutions are tailored to protect your investments, ensuring business continuity and long-term success, even in the face of unforeseen challenges.</p>
+</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Mission and Vision Section -->
+
+<section id="mission-vision" class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Mission Content -->
+            <div class="col-md-6 order-md-2">
+                <h2 class="display-6 fw-bold mb-4">Our Mission</h2>
+                <div class="text-muted" id="mission-text">
+                    Our mission at Fairlink Logistics and Services is to redefine service delivery across industries by:
+
+      <p>Offering high-quality, customized solutions tailored to the unique needs of each client.</p>
+
+        <p>Building enduring partnerships with businesses, institutions, and communities.</p> 
+                    <span class="more-text d-none"> 
+                      <p>  Harnessing cutting-edge technology to enhance efficiency and service quality. </p>
+
+             <p> Ensuring fairness, transparency, and accountability in every interaction. </p>
+
+             <p> Empowering communities through education, skills development, and employment opportunities.</p>
+
+             <p> Guided by fairness and a commitment to excellence, we are dedicated to transforming industries and improving lives through innovative, impactful, and sustainable solutions. </p>
+                    </span>
+                </div>
+                <button id="mission-toggle" class="btn btn-primary btn-sm">Read More</button>
+            </div>
+            <!-- Mission Video -->
+            <div class="col-md-6 order-md-1">
+                <div class="video-container">
+                    <video controls width="100%" height="auto"  poster="./images/pickupdeliever.jpg">
+                        <source src="./images/second video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mt-5">
+            <!-- Vision Content -->
+            <div class="col-md-6">
+                <h2 class="display-6 fw-bold mb-4">Our Vision</h2>
+                <p class="text-muted" id="vision-text">
+                    At Fairlink Logistics and Services, our vision is to become Nigeria’s foremost provider of logistics, educational, and consultancy solutions. We aim to connect businesses, institutions, and individuals through strategic partnerships that foster growth and innovation.
+                    <span class="more-text d-none"> 
+                        By leveraging modern technology and ethical practices, we strive to deliver exceptional results, surpassing client expectations while shaping a brighter future for all.    
+                    </span>
+                </p>
+                <button id="vision-toggle" class="btn btn-primary btn-sm">Read More</button>
+            </div>
+            <!-- Vision Video -->
+            <div class="col-md-6">
+                <div class="video-container">
+                    <video controls width="100%" height="auto">
+                        <source src="./images/third video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- contact -->
+<!-- Contact Us Form -->
+<section id="contact" class="py-5 bg-light">
+    <div class="container">
+        <header class="text-center mb-5">
+            <h1 class="display-5 fw-bold">Contact Us</h1>
+            <p class="lead text-muted">We'd love to hear from you. Please fill out the form below to send us a message on Whatsapp.</p>
+        </header>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+                <form action="https://wa.me/+2347019552088?text=Hello,%20I%20need%20assistance!" method="GET" class="bg-white p-5 rounded shadow">
+                    <div class="mb-4">
+                    
+                        <input type="text" class="form-control" id="fullName" name="fullName" required placeholder="Your full name">
+                    </div>
+                    <div class="mb-4">
+                        
+                        <input type="email" class="form-control" id="email" name="email" required placeholder="Your email address">
+                    </div>
+                    <div class="mb-3">
+        
+                        <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Your message"></textarea>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-whatsapp">Message us on Whatsapp</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- footer -->
+<!-- Footer Section -->
+<footer class="bg-dark text-white py-4 mt-1">
+    <div class="container">
+        <div class="row">
+            <!-- Logo/Brand Name -->
+            <div class="col-md-6 mb-3">
+                <h4 class="fw-bold">
+                    <img src="./images/fair_logo-removebg-preview.png" alt="logo-img" class="logo">
+                </h4>
+                <p>We provide top-notch services and solutions tailored to your needs. Stay connected with us.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-3 mb-2">
+                <h5 class="fw-bold">Quick Links</h5>
+                <ul class="list-unstyled footer-link">
+                    <li><a href="#services-section">Services</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#privacy-policy">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div class="col-md-3 mb-3">
+                <h5 class="fw-bold">Follow Us</h5>
+                <div class="d-flex footer-link">
+                    <a href="https://facebook.com" class=" me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" class=" me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com" class=" me-3"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://instagram.com" class=><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-2">
+            <p class="mb-0">&copy; 2024 Fairlinks Logistics & Services. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

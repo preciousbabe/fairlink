@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+body, html{
+    overflow-x: hidden;
+}
+/* General Styling */
+body {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(to bottom, rgba(173, 216, 230, 0.7), transparent); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Titles */
+h1 {
+    margin-top: 15px;
+    font-size: 26px;
+}
+
+h3 {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* File Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 900px;
+}
+
+/* File Cards */
+.file-card {
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    word-wrap: break-word;  /* Allow the file name to wrap */
+    word-break: break-word; /* Ensure it breaks properly when it exceeds the width */
+    overflow: hidden;  /* Prevent overflow beyond card boundaries */
+}
+
+/* Download Icon */
+.download-icon {
+    text-decoration: none;
+    font-size: 20px;
+    color: blue;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .banner {
+        height: 180px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .file-card {
+        font-size: 14px;
+        height: 45px;
+    }
+
+    .download-icon {
+        font-size: 18px;
+    }
+}
