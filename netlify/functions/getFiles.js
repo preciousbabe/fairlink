@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-exports.handler = async (event, context) => {
-    const filesDirectory = path.join(__dirname, '..', 'public', 'files'); // Path to the files directory
+exports.handler = async () => {
+    const filesDirectory = path.join(__dirname, 'files'); // Adjusted path
 
     try {
         // Read the files from the 'files' directory
@@ -11,13 +11,16 @@ exports.handler = async (event, context) => {
         // Return the list of files as a JSON response
         return {
             statusCode: 200,
+            headers: {
+                "Access-Control-Allow-Origin": "*", // Fix CORS issue
+                "Content-Type": "application/json"
+            },
             body: JSON.stringify({
                 success: true,
-                files: files // List of file names
+                files
             })
         };
     } catch (err) {
-        // In case of an error (e.g., unable to read the files)
         return {
             statusCode: 500,
             body: JSON.stringify({
