@@ -1,4 +1,3 @@
 [build]
-    publish = "static/"
-
-    functions = "serverless/"
+  functions = "netlify/functions"
+  publish = "static"

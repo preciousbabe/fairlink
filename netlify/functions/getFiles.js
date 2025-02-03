@@ -1,12 +1,12 @@
-const fs = require("fs");
+const fs = require("fs").promises; // Use promises version
 const path = require("path");
 
-exports.handler = async (event, context) => {
+exports.handler = async () => { // Use module.exports for compatibility
   const directoryPath = path.join(process.cwd(), 'static', 'files'); // Correct directory path
   
   try {
-    // Read the files in the directory
-    const files = fs.readdirSync(directoryPath);
+    // Read the files in the directory asynchronously
+    const files = await fs.readdir(directoryPath);
     
     // Map files to include URLs for downloading
     const downloadableFiles = files.map(file => ({

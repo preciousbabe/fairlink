@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
     try {
-        const response = await fetch("/.netlify/functions/getFiles", {
+        const response = await fetch('/.netlify/functions/getFiles', { // Corrected here
             method: 'GET',
             headers: {
                 Accept: "application/json"
