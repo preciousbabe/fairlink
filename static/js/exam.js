@@ -1,7 +1,13 @@
 document.addEventListener("DOMContentLoaded", async () => {
     try {
         // Fetch the list of files from the serverless function
-        const response = await fetch("/.netlify/functions/getFiles");
+        const response = await fetch("/.netlify/functions/getFiles", {
+            method: 'GET',
+            headers: {
+                Accept: "application/json"
+            }
+        });
+        
         const data = await response.json();
         
         const container = document.getElementById("fileContainer");

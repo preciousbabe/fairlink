@@ -3,11 +3,11 @@ const path = require('path');
 
 exports.handler = async (event, context) => {
     console.log('Welcome'); // This will log when the function is accessed
-    const directoryPath = path.join(__dirname, '..', 'static', 'files'); // Path to static/files
+    const directoryPath = path.join(process.cwd(), 'static', 'files');
     console.log('Directory path:', directoryPath);
 
     try {
-        const files = fs.readdirSync(directoryPath); // Read files in the directory
+        const files = fs.readdirSync(directoryPath); 
         console.log('Files found:', files);
 
         const downloadableFiles = files.map(file => ({
