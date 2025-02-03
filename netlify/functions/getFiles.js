@@ -2,7 +2,7 @@ const fs = require("fs").promises; // Use promises version
 const path = require("path");
 
 exports.handler = async () => {
-  const files = ["chemistry.pdf", "biology.pdf"]; // List of available files
+  const files = ["UGOBEST UTME PHYSICS_111916.pdf", "BIOLOGY JAMB PAST QUESTION (2014- till date).docx"]; // List of available files
 
   const downloadableFiles = files.map(file => ({
     name: file,
