@@ -2,22 +2,19 @@ const fs = require('fs');
 const path = require('path');
 
 exports.handler = async (event, context) => {
-    // Define the directory to look for files
-    const directoryPath = path.join(__dirname, '..', 'static', 'files');
+    console.log('Function invoked');
+    const directoryPath = path.join(__dirname, '..', 'static', 'files'); // Pointing to static/files
+    console.log('Directory path:', directoryPath);
 
     try {
-        // Read files from the directory
-        const files = fs.readdirSync(directoryPath);
+        const files = fs.readdirSync(directoryPath); // Reading files in the directory
+        console.log('Files found:', files);
 
-        // Create downloadable links for each file
-        const downloadableFiles = files.map(file => {
-            return {
-                name: file,
-                url: `/static/files/${file}` // Adjust the URL as needed for your setup
-            };
-        });
+        const downloadableFiles = files.map(file => ({
+            name: file,
+            url: `/static/files/${file}` // Dynamic URL creation
+        }));
 
-        // Send back the file names in JSON format
         return {
             statusCode: 200,
             body: JSON.stringify({
@@ -31,7 +28,8 @@ exports.handler = async (event, context) => {
             statusCode: 500,
             body: JSON.stringify({
                 success: false,
-                message: 'Failed to load files.'
+                message: 'Failed to load files.',
+                error: error.message
             }),
         };
     }
