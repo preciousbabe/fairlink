@@ -9,12 +9,20 @@ exports.handler = async (event, context) => {
         // Read files from the directory
         const files = fs.readdirSync(directoryPath);
 
+        // Create downloadable links for each file
+        const downloadableFiles = files.map(file => {
+            return {
+                name: file,
+                url: `/static/files/${file}` // Adjust the URL as needed for your setup
+            };
+        });
+
         // Send back the file names in JSON format
         return {
             statusCode: 200,
             body: JSON.stringify({
                 success: true,
-                files: files
+                files: downloadableFiles
             }),
         };
     } catch (error) {

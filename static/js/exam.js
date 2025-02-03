@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
     try {
+        // Fetch the list of files from the serverless function
         const response = await fetch("/.netlify/functions/getFiles");
         const data = await response.json();
         
@@ -12,8 +13,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                 card.className = "file-card";
 
                 card.innerHTML = `
-                    <span class="file-name">${file}</span>
-                    <a href="/static/files/${file}" download class="download-icon">
+                    <span class="file-name">${file.name}</span>
+                    <a href="${file.url}" download class="download-icon">
                         &#x1F4E5; <!-- Download Icon -->
                     </a>
                 `;

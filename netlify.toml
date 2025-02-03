@@ -1,8 +1,4 @@
 [build]
-  functions = "netlify/functions"
-  publish = "."
+    publish = "static/"
 
-[[redirects]]
-  from = "/files/*"
-  to = "/static/files/:splat"
-  status = 200
+    functions = "serverless/"
