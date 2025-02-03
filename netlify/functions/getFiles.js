@@ -3,7 +3,7 @@ const path = require('path');
 
 exports.handler = async (event, context) => {
     // Define the directory to look for files
-    const directoryPath = path.join(__dirname, '../files'); // Adjust path as needed
+    const directoryPath = path.join(__dirname, '..', '..', 'static', 'files');
 
     try {
         // Read files from the directory

@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                 card.innerHTML = `
                     <span class="file-name">${file}</span>
-                    <a href="/files/${file}" download class="download-icon">
+                    <a href="/static/files/${file}" download class="download-icon">
                         &#x1F4E5; <!-- Download Icon -->
                     </a>
                 `;
