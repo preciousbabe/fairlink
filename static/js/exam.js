@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
     try {
-        // Fetch the list of files from the serverless function
         const response = await fetch("/.netlify/functions/getFiles", {
             method: 'GET',
             headers: {
@@ -9,22 +8,18 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
         
         const data = await response.json();
-        
         const container = document.getElementById("fileContainer");
 
         if (data.success) {
-            // Loop through the file list returned by the serverless function
             data.files.forEach(file => {
                 const card = document.createElement("div");
                 card.className = "file-card";
-
                 card.innerHTML = `
                     <span class="file-name">${file.name}</span>
                     <a href="${file.url}" download class="download-icon">
                         &#x1F4E5; <!-- Download Icon -->
                     </a>
                 `;
-
                 container.appendChild(card);
             });
         } else {
