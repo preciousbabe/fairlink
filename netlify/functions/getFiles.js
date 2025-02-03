@@ -2,28 +2,29 @@ const fs = require('fs');
 const path = require('path');
 
 exports.handler = async (event, context) => {
-    const filesDirectory = path.join(__dirname, 'files'); // Adjust this path if needed
+    // Define the directory to look for files
+    const directoryPath = path.join(__dirname, '../files'); // Adjust path as needed
 
     try {
-        const files = fs.readdirSync(filesDirectory);
+        // Read files from the directory
+        const files = fs.readdirSync(directoryPath);
+
+        // Send back the file names in JSON format
         return {
             statusCode: 200,
-            headers: {
-                "Access-Control-Allow-Origin": "*",
-                "Content-Type": "application/json"
-            },
             body: JSON.stringify({
                 success: true,
-                files
-            })
+                files: files
+            }),
         };
-    } catch (err) {
+    } catch (error) {
+        console.error('Error reading files:', error);
         return {
             statusCode: 500,
             body: JSON.stringify({
                 success: false,
-                message: 'Unable to read files'
-            })
+                message: 'Failed to load files.'
+            }),
         };
     }
 };
